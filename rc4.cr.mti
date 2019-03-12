@@ -1,4 +1,11 @@
-C:/Users/stfar/cpen311-lab4/s_memory.v {1 {vlog -work work -stats=none C:/Users/stfar/cpen311-lab4/s_memory.v
+C:/Users/stfar/cpen311-lab4/init_ram_fsm.sv {1 {vlog -work work -sv -stats=none C:/Users/stfar/cpen311-lab4/init_ram_fsm.sv
+Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
+-- Compiling module init_ram_fsm
+
+Top level modules:
+	init_ram_fsm
+
+} {} {}} C:/Users/stfar/cpen311-lab4/s_memory.v {1 {vlog -work work -stats=none C:/Users/stfar/cpen311-lab4/s_memory.v
 Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
 -- Compiling module s_memory
 
@@ -11,12 +18,5 @@ Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
 
 Top level modules:
 	init_ram_fsm_tb
-
-} {} {}} C:/Users/stfar/cpen311-lab4/counter_en.sv {1 {vlog -work work -sv -stats=none C:/Users/stfar/cpen311-lab4/counter_en.sv
-Model Technology ModelSim ALTERA vlog 10.3c Compiler 2014.09 Sep 20 2014
--- Compiling module counter_en
-
-Top level modules:
-	counter_en
 
 } {} {}}

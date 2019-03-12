@@ -9,6 +9,8 @@ module init_ram_fsm_tb();
     logic       sim_fin_strobe;
     logic [7:0] sim_mem_out;
 
+    int i;
+
     init_ram_fsm init_ram_fsm_inst(
         .clk        (sim_clk),
         .rst        (sim_rst),
@@ -26,7 +28,7 @@ module init_ram_fsm_tb();
     );
 
     s_memory s_memory_inst(
-        .address (sim_count),
+        .address (sim_count | i),
         .clock   (sim_clk),
         .data    (sim_count),
         .wren    (sim_wr_and_inc),
@@ -44,5 +46,11 @@ module init_ram_fsm_tb();
 
         @(negedge sim_clk); sim_start = 1'b1;
         @(negedge sim_clk); sim_start = 1'b0;
+
+        $display("Contents of RAM:");
+        for (i = 0; i < 255; i++) begin
+            @(negedge sim_clk);
+            $write("%d ", sim_mem_out);
+        end
     end
 endmodule
