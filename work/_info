@@ -10,7 +10,7 @@ cModel Technology
 dC:/Users/stfar/cpen311/lab2/sim
 vcounter_en
 Z0 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z1 !s110 1552424825
+Z1 !s110 1552429693
 !i10b 1
 !s100 Q1LCIP6C<8_UObk5ail9<2
 IC6mQX>3Y8UU[aNLlj>PFm3
@@ -26,14 +26,14 @@ Z4 OV;L;10.3c;59
 r1
 !s85 0
 31
-!s108 1552424825.967000
+!s108 1552429693.709000
 !s107 C:/Users/stfar/cpen311-lab4/counter_en.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/counter_en.sv|
 !i113 1
 Z5 o-work work -sv
 vinit_ram_fsm
 R0
-!s110 1552424826
+R1
 !i10b 1
 !s100 ;zTX]=_ZZkV]ddhc3DQP70
 Iz?ASgLYfa>Re1?f1h;>Tl3
@@ -49,7 +49,7 @@ R4
 r1
 !s85 0
 31
-!s108 1552424826.091000
+!s108 1552429693.834000
 !s107 C:/Users/stfar/cpen311-lab4/init_ram_fsm.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/init_ram_fsm.sv|
 !i113 1
@@ -58,13 +58,13 @@ vinit_ram_fsm_tb
 R0
 R1
 !i10b 1
-!s100 AIiz]V4=4>2FEzJiW6iG[2
-I73QRJ]bNJ2ThGYVD^TgGD0
+!s100 ONk6Lj1j8cGn8a?bYA:O72
+Ig;iFThga`3>U>fnVojQQR3
 R2
 !s105 init_ram_fsm_tb_sv_unit
 S1
 R3
-w1552424761
+w1552429689
 8C:/Users/stfar/cpen311-lab4/init_ram_fsm_tb.sv
 FC:/Users/stfar/cpen311-lab4/init_ram_fsm_tb.sv
 L0 3
@@ -72,7 +72,7 @@ R4
 r1
 !s85 0
 31
-!s108 1552424825.701000
+!s108 1552429693.443000
 !s107 C:/Users/stfar/cpen311-lab4/init_ram_fsm_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/init_ram_fsm_tb.sv|
 !i113 1
@@ -92,7 +92,7 @@ R4
 r1
 !s85 0
 31
-!s108 1552424825.842000
+!s108 1552429693.568000
 !s107 C:/Users/stfar/cpen311-lab4/s_memory.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/stfar/cpen311-lab4/s_memory.v|
 !i113 1

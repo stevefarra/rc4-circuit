@@ -41,8 +41,8 @@ module init_ram_fsm_tb();
     end
 
     initial begin
-                            sim_rst = 1'b1;
-        @(negedge sim_clk); sim_rst = 1'b0;
+                                      sim_rst = 1'b1;
+        repeat(4) @(negedge sim_clk); sim_rst = 1'b0;
 
         @(negedge sim_clk); sim_start = 1'b1;
         @(negedge sim_clk); sim_start = 1'b0;
