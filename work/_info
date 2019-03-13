@@ -10,7 +10,7 @@ cModel Technology
 dC:/Users/stfar/cpen311/lab2/sim
 vcounter_en
 Z0 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z1 !s110 1552429693
+Z1 !s110 1552517101
 !i10b 1
 !s100 Q1LCIP6C<8_UObk5ail9<2
 IC6mQX>3Y8UU[aNLlj>PFm3
@@ -26,7 +26,7 @@ Z4 OV;L;10.3c;59
 r1
 !s85 0
 31
-!s108 1552429693.709000
+!s108 1552517101.367000
 !s107 C:/Users/stfar/cpen311-lab4/counter_en.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/counter_en.sv|
 !i113 1
@@ -35,13 +35,13 @@ vinit_ram_fsm
 R0
 R1
 !i10b 1
-!s100 ;zTX]=_ZZkV]ddhc3DQP70
-Iz?ASgLYfa>Re1?f1h;>Tl3
+!s100 V@@z836]O<]S85o7A>:O=1
+IlH^mUGcSXUU:mlS885WQ=3
 R2
 !s105 init_ram_fsm_sv_unit
 S1
 R3
-w1552423823
+w1552515031
 8C:/Users/stfar/cpen311-lab4/init_ram_fsm.sv
 FC:/Users/stfar/cpen311-lab4/init_ram_fsm.sv
 L0 1
@@ -49,36 +49,36 @@ R4
 r1
 !s85 0
 31
-!s108 1552429693.834000
+!s108 1552517101.476000
 !s107 C:/Users/stfar/cpen311-lab4/init_ram_fsm.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/init_ram_fsm.sv|
 !i113 1
 R5
-vinit_ram_fsm_tb
+vksa_tb
 R0
 R1
 !i10b 1
-!s100 ONk6Lj1j8cGn8a?bYA:O72
-Ig;iFThga`3>U>fnVojQQR3
+!s100 C6N?2OR<0CFemUVDECQUI3
+IDbbYcgUUXJZ6dmEeI02Sl1
 R2
-!s105 init_ram_fsm_tb_sv_unit
+!s105 ksa_tb_sv_unit
 S1
 R3
-w1552429689
-8C:/Users/stfar/cpen311-lab4/init_ram_fsm_tb.sv
-FC:/Users/stfar/cpen311-lab4/init_ram_fsm_tb.sv
+w1552517097
+8C:/Users/stfar/cpen311-lab4/ksa_tb.sv
+FC:/Users/stfar/cpen311-lab4/ksa_tb.sv
 L0 3
 R4
 r1
 !s85 0
 31
-!s108 1552429693.443000
-!s107 C:/Users/stfar/cpen311-lab4/init_ram_fsm_tb.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/init_ram_fsm_tb.sv|
+!s108 1552517101.585000
+!s107 C:/Users/stfar/cpen311-lab4/ksa_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/ksa_tb.sv|
 !i113 1
 R5
 vs_memory
-R1
+!s110 1552429693
 !i10b 1
 !s100 BjRR>bb68YbUSj33Bj_^]0
 IAcE6Vm7<[W56nCegcmA=a3
@@ -97,3 +97,26 @@ r1
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/stfar/cpen311-lab4/s_memory.v|
 !i113 1
 o-work work
+vtask1
+R0
+R1
+!i10b 1
+!s100 Pf`>6MRzHTf5>dF;mC?``1
+I2j@`=iC?e0[YeBz:Aie^X3
+R2
+!s105 task1_sv_unit
+S1
+R3
+w1552514975
+8C:/Users/stfar/cpen311-lab4/task1.sv
+FC:/Users/stfar/cpen311-lab4/task1.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1552517101.273000
+!s107 C:/Users/stfar/cpen311-lab4/task1.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/task1.sv|
+!i113 1
+R5

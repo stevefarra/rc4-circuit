@@ -2,9 +2,9 @@ module init_ram_fsm(
     input  logic       clk,
     input  logic       rst,
     input  logic       start,
-    input  logic [8:0] count,
+    input  logic [7:0] count,
     output logic       wr_and_inc,
-    output logic       fin_strobe
+    output logic       fin_strobe,
 );
 
     typedef enum logic [1:0] {
@@ -23,8 +23,8 @@ module init_ram_fsm(
                 IDLE: if   (start) state <= UPDATE;
                       else         state <= IDLE;
 
-                UPDATE: if   (count[8]) state <= DONE;
-                        else            state <= UPDATE;
+                UPDATE: if   (&count) state <= DONE;
+                        else          state <= UPDATE;
 
                 DONE: state <= IDLE;
 

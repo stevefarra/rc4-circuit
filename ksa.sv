@@ -7,7 +7,9 @@ module ksa(
 );
     logic clk;
     logic rst;
-    logic start_task_1;
+    logic start_task1;
+    logic start_task2;
+    logic start_task3;
 
     logic [6:0] ssOut;
     logic [3:0] nIn;
@@ -16,9 +18,11 @@ module ksa(
     logic       wr_and_inc;
     logic       fin_strobe;
 
-    assign          clk = CLOCK_50;
-    assign          rst = ~KEY[3];
-    assign start_task_1 = ~KEY[2];
+    assign         clk = CLOCK_50;
+    assign         rst = ~KEY[3];
+    assign start_task1 = ~KEY[2];
+    assign start_task2 = ~KEY[1];
+    assign start_task3 = ~KEY[0];
 
     SevenSegmentDisplayDecoder mod(
         .nIn(nIn),
@@ -28,7 +32,7 @@ module ksa(
     init_ram_fsm init_ram_fsm_inst(
         .clk        (clk),
         .rst        (rst),
-        .start      (start_task_1),
+        .start      (start_task1),
         .count      (addr_and_data),
         .wr_and_inc (wr_and_inc),
         .fin_strobe (fin_strobe)
