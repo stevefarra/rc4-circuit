@@ -33,6 +33,7 @@ module ksa_tb();
         .clk        (clk),
         .rst        (rst),
         .start      (start),
+
         .address    (task1_addr),
         .data       (task1_data),
         .wr_en      (task1_wr_en),
@@ -44,14 +45,14 @@ module ksa_tb();
         .clk        (clk),
         .rst        (rst),
         .start      (task1_fin),
+        .data_in    (mem_out),
         .secret_key (24'h000249),
-        .mem_out    (task2a_data),
 
+        .address    (task2a_addr),
+        .data_out   (task2a_data),
         .wr_en      (task2a_wr_en),
-        .fsm_on     (task2a_on),
-        .fin_strobe (task2a_fin),
-        .mem_in     (mem_out),
-        .address    (task2a_addr)
+        .task_on    (task2a_on),
+        .fin_strobe (task2a_fin)
     );
 
     assign address = read_ram ? i : (task1_on ? task1_addr : task2a_addr);
@@ -73,7 +74,8 @@ module ksa_tb();
 
     initial begin
         // Task 1: Initialize RAM
-                             read_ram = 1'b0;
+        read_ram = 1'b0;
+
                                   rst = 1'b1;
         repeat(4) @(negedge clk); rst = 1'b0;
 
@@ -87,7 +89,7 @@ module ksa_tb();
         $display("Contents of RAM:");
         for (i = 0; i < 256; i++) begin
             @(negedge clk);
-            $write("%d ", mem_out);
+            $write("%h ", mem_out);
         end
     end
 endmodule

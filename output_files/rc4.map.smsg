@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at shuffle_fsm.sv(8): object "inc_i" differs only in case from object "INC_I" in the same scope

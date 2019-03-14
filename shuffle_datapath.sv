@@ -9,12 +9,12 @@ module shuffle_datapath(
     input  logic        store_j,
 
     input  logic [23:0] secret_key,
-    input  logic  [7:0] mem_out,
+    input  logic  [7:0] data_from_mem,
 
     output logic  [8:0] i,
 
     output logic  [7:0] address,
-    output logic  [7:0] mem_in
+    output logic  [7:0] data_to_mem
 );
 
     logic [7:0] j;
@@ -24,16 +24,16 @@ module shuffle_datapath(
 
     logic [7:0] secret_byte;
 
-    assign address = sel_addr_j ?      j : i;
-    assign  mem_in = sel_data_j ? data_j : data_i;
+    assign      address = sel_addr_j ?      j : i[7:0];
+    assign  data_to_mem = sel_data_j ? data_j : data_i;
 
     always_ff @(posedge clk)
         if      (rst)          data_i <= 8'b0;
-        else if (store_data_i) data_i <= mem_out;
+        else if (store_data_i) data_i <= data_from_mem;
 
     always_ff @(posedge clk)
         if      (rst)          data_j <= 8'b0;
-        else if (store_data_i) data_j <= mem_out;
+        else if (store_data_j) data_j <= data_from_mem;
 
     always_ff @(posedge clk)
         if      (rst)   i = 9'b0;
@@ -41,12 +41,13 @@ module shuffle_datapath(
 
     always_comb
         case (i % 3)
-            2'b00: secret_byte <= secret_key[23:16];
-            2'b01: secret_byte <= secret_key[15:8];
-            2'b10: secret_byte <= secret_key[7:0];
+              2'b00: secret_byte <= secret_key[23:16];
+              2'b01: secret_byte <= secret_key[15:8];
+              2'b10: secret_byte <= secret_key[7:0];
+            default: secret_byte <= secret_key[7:0];
         endcase
 
     always_ff @(posedge clk)
         if      (rst)     j <= 8'b0;
-        else if (store_j) j <= j + mem_out + secret_byte;
+        else if (store_j) j <= j + data_from_mem + secret_byte;
 endmodule

@@ -1,3 +1,3 @@
 project compileall;
 restart -f;
-run 3500;
+run 10000;
