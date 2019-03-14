@@ -6,60 +6,60 @@
 		<ApplicationError>
 		<Bits>64</Bits>
 		<CommandLine>quartus</CommandLine>
-		<ErrorMessage>Access Violation at 0X000000005EC3FF66</ErrorMessage>
+		<ErrorMessage>Access Violation at 0X000000005EF9FF66</ErrorMessage>
 		<Line>0</Line>
 		<Platform>windows</Platform>
 		<SourceFile>unknown</SourceFile>
 		<StackTrace>
-	 0x5ec3ff65: QtGui4 + 0x6ff65 (??1QWidget@@UEAA@XZ + 0x4a5)
-	 0x5ec408f5: QtGui4 + 0x708f5 (??1QWidgetPrivate@@UEAA@XZ + 0x535)
-	 0x5f81e512: QtCore4 + 0x14e512 (?deleteChildren@QObjectPrivate@@QEAAXXZ + 0xa2)
-	 0x5ec40267: QtGui4 + 0x70267 (??1QWidget@@UEAA@XZ + 0x7a7)
-	0x7ff9cd7ea959: SYS_QUI + 0x3a959 (??1QUI_MDI_SUB_WND@@UEAA@XZ + 0xb9)
-	 0x5f81fd14: QtCore4 + 0x14fd14 (?event@QObject@@UEAA_NPEAVQEvent@@@Z + 0xa4)
-	 0x5ec45de2: QtGui4 + 0x75de2 (?event@QWidget@@MEAA_NPEAVQEvent@@@Z + 0xd42)
-	 0x5ebfc765: QtGui4 + 0x2c765 (?notify_helper@QApplicationPrivate@@QEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0xf5)
-	 0x5ebfc3ff: QtGui4 + 0x2c3ff (?notify@QApplication@@UEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x17bf)
-	 0x5f80aaab: QtCore4 + 0x13aaab (?notifyInternal@QCoreApplication@@AEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x7b)
-	 0x5f80c772: QtCore4 + 0x13c772 (?sendPostedEvents@QCoreApplicationPrivate@@SAXPEAVQObject@@HPEAVQThreadData@@@Z + 0x2b2)
-	 0x5f7058e8: QtCore4 + 0x358e8 (?d_func@QEventDispatcherWin32@@AEBAPEBVQEventDispatcherWin32Private@@XZ + 0x268)
-	 0x5f706f20: QtCore4 + 0x36f20 (?terminate@QThread@@QEAAXXZ + 0xa0)
-	0x7ff997858e50: sld_redq + 0x8e50
-	0x7ff99785a073: sld_redq + 0xa073
-	0x7ff997858cfe: sld_redq + 0x8cfe
-	0x7ff997859d53: sld_redq + 0x9d53
-	0x7ff99785906e: sld_redq + 0x906e
-	0x7ff99785a2c3: sld_redq + 0xa2c3
-	 0x5f81e512: QtCore4 + 0x14e512 (?deleteChildren@QObjectPrivate@@QEAAXXZ + 0xa2)
-	 0x5ec40267: QtGui4 + 0x70267 (??1QWidget@@UEAA@XZ + 0x7a7)
-	0x7ff997859a94: sld_redq + 0x9a94
-	 0x5f81e512: QtCore4 + 0x14e512 (?deleteChildren@QObjectPrivate@@QEAAXXZ + 0xa2)
-	 0x5ec40267: QtGui4 + 0x70267 (??1QWidget@@UEAA@XZ + 0x7a7)
-	0x7ff99785a037: sld_redq + 0xa037
-	 0x5f81e512: QtCore4 + 0x14e512 (?deleteChildren@QObjectPrivate@@QEAAXXZ + 0xa2)
-	 0x5ec40267: QtGui4 + 0x70267 (??1QWidget@@UEAA@XZ + 0x7a7)
-	0x7ff997859db7: sld_redq + 0x9db7
-	 0x5f81fd14: QtCore4 + 0x14fd14 (?event@QObject@@UEAA_NPEAVQEvent@@@Z + 0xa4)
-	 0x5ec45de2: QtGui4 + 0x75de2 (?event@QWidget@@MEAA_NPEAVQEvent@@@Z + 0xd42)
-	 0x5eff0f10: QtGui4 + 0x420f10 (?event@QMainWindow@@MEAA_NPEAVQEvent@@@Z + 0x280)
-	 0x5ebfc765: QtGui4 + 0x2c765 (?notify_helper@QApplicationPrivate@@QEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0xf5)
-	 0x5ebfc3ff: QtGui4 + 0x2c3ff (?notify@QApplication@@UEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x17bf)
-	 0x5f80aaab: QtCore4 + 0x13aaab (?notifyInternal@QCoreApplication@@AEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x7b)
-	 0x5f80c772: QtCore4 + 0x13c772 (?sendPostedEvents@QCoreApplicationPrivate@@SAXPEAVQObject@@HPEAVQThreadData@@@Z + 0x2b2)
-	 0x5f839758: QtCore4 + 0x169758 (?processEvents@QEventDispatcherWin32@@UEAA_NV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0xbf8)
+	 0x5ef9ff65: QtGui4 + 0x6ff65 (??1QWidget@@UEAA@XZ + 0x4a5)
+	 0x5efa08f5: QtGui4 + 0x708f5 (??1QWidgetPrivate@@UEAA@XZ + 0x535)
+	 0x5ed1e512: QtCore4 + 0x14e512 (?deleteChildren@QObjectPrivate@@QEAAXXZ + 0xa2)
+	 0x5efa0267: QtGui4 + 0x70267 (??1QWidget@@UEAA@XZ + 0x7a7)
+	0x7ff9c941a959: SYS_QUI + 0x3a959 (??1QUI_MDI_SUB_WND@@UEAA@XZ + 0xb9)
+	 0x5ed1fd14: QtCore4 + 0x14fd14 (?event@QObject@@UEAA_NPEAVQEvent@@@Z + 0xa4)
+	 0x5efa5de2: QtGui4 + 0x75de2 (?event@QWidget@@MEAA_NPEAVQEvent@@@Z + 0xd42)
+	 0x5ef5c765: QtGui4 + 0x2c765 (?notify_helper@QApplicationPrivate@@QEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0xf5)
+	 0x5ef5c3ff: QtGui4 + 0x2c3ff (?notify@QApplication@@UEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x17bf)
+	 0x5ed0aaab: QtCore4 + 0x13aaab (?notifyInternal@QCoreApplication@@AEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x7b)
+	 0x5ed0c772: QtCore4 + 0x13c772 (?sendPostedEvents@QCoreApplicationPrivate@@SAXPEAVQObject@@HPEAVQThreadData@@@Z + 0x2b2)
+	 0x5ec058e8: QtCore4 + 0x358e8 (?d_func@QEventDispatcherWin32@@AEBAPEBVQEventDispatcherWin32Private@@XZ + 0x268)
+	 0x5ec06f20: QtCore4 + 0x36f20 (?terminate@QThread@@QEAAXXZ + 0xa0)
+	0x7ff98c4d8e50: sld_redq + 0x8e50
+	0x7ff98c4da073: sld_redq + 0xa073
+	0x7ff98c4d8cfe: sld_redq + 0x8cfe
+	0x7ff98c4d9d53: sld_redq + 0x9d53
+	0x7ff98c4d906e: sld_redq + 0x906e
+	0x7ff98c4da2c3: sld_redq + 0xa2c3
+	 0x5ed1e512: QtCore4 + 0x14e512 (?deleteChildren@QObjectPrivate@@QEAAXXZ + 0xa2)
+	 0x5efa0267: QtGui4 + 0x70267 (??1QWidget@@UEAA@XZ + 0x7a7)
+	0x7ff98c4d9a94: sld_redq + 0x9a94
+	 0x5ed1e512: QtCore4 + 0x14e512 (?deleteChildren@QObjectPrivate@@QEAAXXZ + 0xa2)
+	 0x5efa0267: QtGui4 + 0x70267 (??1QWidget@@UEAA@XZ + 0x7a7)
+	0x7ff98c4da037: sld_redq + 0xa037
+	 0x5ed1e512: QtCore4 + 0x14e512 (?deleteChildren@QObjectPrivate@@QEAAXXZ + 0xa2)
+	 0x5efa0267: QtGui4 + 0x70267 (??1QWidget@@UEAA@XZ + 0x7a7)
+	0x7ff98c4d9db7: sld_redq + 0x9db7
+	 0x5ed1fd14: QtCore4 + 0x14fd14 (?event@QObject@@UEAA_NPEAVQEvent@@@Z + 0xa4)
+	 0x5efa5de2: QtGui4 + 0x75de2 (?event@QWidget@@MEAA_NPEAVQEvent@@@Z + 0xd42)
+	 0x5f350f10: QtGui4 + 0x420f10 (?event@QMainWindow@@MEAA_NPEAVQEvent@@@Z + 0x280)
+	 0x5ef5c765: QtGui4 + 0x2c765 (?notify_helper@QApplicationPrivate@@QEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0xf5)
+	 0x5ef5c3ff: QtGui4 + 0x2c3ff (?notify@QApplication@@UEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x17bf)
+	 0x5ed0aaab: QtCore4 + 0x13aaab (?notifyInternal@QCoreApplication@@AEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x7b)
+	 0x5ed0c772: QtCore4 + 0x13c772 (?sendPostedEvents@QCoreApplicationPrivate@@SAXPEAVQObject@@HPEAVQThreadData@@@Z + 0x2b2)
+	 0x5ed39758: QtCore4 + 0x169758 (?processEvents@QEventDispatcherWin32@@UEAA_NV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0xbf8)
 	0x7ffa00c9ca65: USER32 + 0xca65 (DispatchMessageW + 0x6a5)
 	0x7ffa00c9c581: USER32 + 0xc581 (DispatchMessageW + 0x1c1)
-	 0x5f838f42: QtCore4 + 0x168f42 (?processEvents@QEventDispatcherWin32@@UEAA_NV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x3e2)
-	 0x5ec6f864: QtGui4 + 0x9f864 (?openPopup@QApplicationPrivate@@QEAAXPEAVQWidget@@@Z + 0x204)
-	 0x5f806a7b: QtCore4 + 0x136a7b (?exec@QEventLoop@@QEAAHV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x22b)
-	 0x5f809cbf: QtCore4 + 0x139cbf (?exec@QCoreApplication@@SAHXZ + 0xdf)
-	0x7ff60608197b: quartus + 0x197b
+	 0x5ed38f42: QtCore4 + 0x168f42 (?processEvents@QEventDispatcherWin32@@UEAA_NV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x3e2)
+	 0x5efcf864: QtGui4 + 0x9f864 (?openPopup@QApplicationPrivate@@QEAAXPEAVQWidget@@@Z + 0x204)
+	 0x5ed06a7b: QtCore4 + 0x136a7b (?exec@QEventLoop@@QEAAHV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x22b)
+	 0x5ed09cbf: QtCore4 + 0x139cbf (?exec@QCoreApplication@@SAHXZ + 0xdf)
+	0x7ff60086197b: quartus + 0x197b
 	0x7ff9f0b2cad8: CCL_MSG + 0xcad8 (?msg_initialize_out_of_memory_handler@@YAXXZ + 0x378)
 	0x7ff9f0b2e20c: CCL_MSG + 0xe20c (?msg_set_stack_size@@YAXH@Z + 0x7c)
 	0x7ff9f0c35aa0: ccl_mem + 0x5aa0 (?mem_gen_get_project_output_directory@@YAPEBDXZ + 0x64)
 	0x7ff9f0b2c721: CCL_MSG + 0xc721 (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0xa1)
-	0x7ff606082507: quartus + 0x2507
-	0x7ff606081e74: quartus + 0x1e74
+	0x7ff600862507: quartus + 0x2507
+	0x7ff600861e74: quartus + 0x1e74
 	0x7ffa036f81f3: KERNEL32 + 0x181f3 (BaseThreadInitThunk + 0x13)
 	0x7ffa0383a250: ntdll + 0x6a250 (RtlUserThreadStart + 0x20)
 		</StackTrace>
@@ -71,9 +71,9 @@
 			<IncrementalCompilation/>
 			<TopLevelEntityName/>
 		</Compilation>
-		<DateInvoked>2019/03/13 22:05:42</DateInvoked>
-		<ElapsedTime>3936</ElapsedTime>
-		<IP>206.87.212.24</IP>
+		<DateInvoked>2019/03/14 09:39:41</DateInvoked>
+		<ElapsedTime>1411</ElapsedTime>
+		<IP>128.189.118.19,192.168.0.29</IP>
 		<IsInternal>false</IsInternal>
 		<IsQt>true</IsQt>
 		<License>
@@ -90,6 +90,9 @@
 			</NIC>
 			<NIC>
 				<Address>4845202e65d4</Address>
+			</NIC>
+			<NIC>
+				<Address>00059a3c7a00</Address>
 			</NIC>
 			<NIC>
 				<Address>4845202e65d0</Address>

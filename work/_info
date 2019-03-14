@@ -8,29 +8,115 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/stfar/cpen311/lab2/sim
-vcounter_en
+vcompute_datapath
 Z0 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z1 !s110 1552580527
+Z1 !s110 1552606157
 !i10b 1
-!s100 Q1LCIP6C<8_UObk5ail9<2
-IC6mQX>3Y8UU[aNLlj>PFm3
+!s100 nE0[@c>Ccl<iUJJb6;fWd1
+IHc9`5fGKclM6jB^AR9ik53
 Z2 V`JN@9S9cnhjKRR_L]QIcM3
-!s105 counter_en_sv_unit
+!s105 compute_datapath_sv_unit
 S1
 Z3 dC:/Users/stfar/cpen311-lab4
-w1552424820
-8C:/Users/stfar/cpen311-lab4/counter_en.sv
-FC:/Users/stfar/cpen311-lab4/counter_en.sv
+w1552605771
+8C:/Users/stfar/cpen311-lab4/compute_datapath.sv
+FC:/Users/stfar/cpen311-lab4/compute_datapath.sv
 L0 1
 Z4 OV;L;10.3c;59
 r1
 !s85 0
 31
-!s108 1552580527.092000
+!s108 1552606157.633000
+!s107 C:/Users/stfar/cpen311-lab4/compute_datapath.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/compute_datapath.sv|
+!i113 1
+Z5 o-work work -sv
+vcompute_fsm
+R0
+R1
+!i10b 1
+!s100 SSDEnR2hED8H3H_>b_:dS0
+I=QoGE2Y51Go<cLiZVMcbF3
+R2
+!s105 compute_fsm_sv_unit
+S1
+R3
+w1552600607
+8C:/Users/stfar/cpen311-lab4/compute_fsm.sv
+FC:/Users/stfar/cpen311-lab4/compute_fsm.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1552606157.539000
+!s107 C:/Users/stfar/cpen311-lab4/compute_fsm.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/compute_fsm.sv|
+!i113 1
+R5
+vcounter_en
+R0
+Z6 !s110 1552606156
+!i10b 1
+!s100 Q1LCIP6C<8_UObk5ail9<2
+IC6mQX>3Y8UU[aNLlj>PFm3
+R2
+!s105 counter_en_sv_unit
+S1
+R3
+w1552424820
+8C:/Users/stfar/cpen311-lab4/counter_en.sv
+FC:/Users/stfar/cpen311-lab4/counter_en.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1552606156.883000
 !s107 C:/Users/stfar/cpen311-lab4/counter_en.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/counter_en.sv|
 !i113 1
-Z5 o-work work -sv
+R5
+vdec_memory
+R1
+!i10b 1
+!s100 ?Jk1zmNIc=n`z@KeA`V>;1
+IK6gV2QKBo@VSAHS@?Taho2
+R2
+R3
+w1552584740
+8C:/Users/stfar/cpen311-lab4/dec_memory.v
+FC:/Users/stfar/cpen311-lab4/dec_memory.v
+Z7 L0 40
+R4
+r1
+!s85 0
+31
+!s108 1552606157.852000
+!s107 C:/Users/stfar/cpen311-lab4/dec_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/stfar/cpen311-lab4/dec_memory.v|
+!i113 1
+Z8 o-work work
+venc_memory
+R1
+!i10b 1
+!s100 [8UT`<gQI=aU]?3RaA1PG0
+Id2A_3iPV18DbYkNF3G70h3
+R2
+R3
+w1552583611
+8C:/Users/stfar/cpen311-lab4/enc_memory.v
+FC:/Users/stfar/cpen311-lab4/enc_memory.v
+R7
+R4
+r1
+!s85 0
+31
+!s108 1552606157.961000
+!s107 C:/Users/stfar/cpen311-lab4/enc_memory.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/stfar/cpen311-lab4/enc_memory.v|
+!i113 1
+R8
 vinit_ram_fsm
 R0
 R1
@@ -49,7 +135,7 @@ R4
 r1
 !s85 0
 31
-!s108 1552580527.202000
+!s108 1552606156.977000
 !s107 C:/Users/stfar/cpen311-lab4/init_ram_fsm.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/init_ram_fsm.sv|
 !i113 1
@@ -58,13 +144,13 @@ vksa_tb
 R0
 R1
 !i10b 1
-!s100 2mA`]=PlMUK0n<1]bXMDM0
-I_^M=iz39_WjF4`7BliSDa1
+!s100 JKLQ[k^5OH`A_]z`BeCNQ3
+IBEDeaSd=JidFf1bXb@zgG3
 R2
 !s105 ksa_tb_sv_unit
 S1
 R3
-w1552540172
+w1552606147
 8C:/Users/stfar/cpen311-lab4/ksa_tb.sv
 FC:/Users/stfar/cpen311-lab4/ksa_tb.sv
 L0 3
@@ -72,13 +158,13 @@ R4
 r1
 !s85 0
 31
-!s108 1552580527.311000
+!s108 1552606157.086000
 !s107 C:/Users/stfar/cpen311-lab4/ksa_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/ksa_tb.sv|
 !i113 1
 R5
 vs_memory
-!s110 1552429693
+!s110 1552606158
 !i10b 1
 !s100 BjRR>bb68YbUSj33Bj_^]0
 IAcE6Vm7<[W56nCegcmA=a3
@@ -87,16 +173,16 @@ R3
 w1552272584
 8C:/Users/stfar/cpen311-lab4/s_memory.v
 FC:/Users/stfar/cpen311-lab4/s_memory.v
-L0 40
+R7
 R4
 r1
 !s85 0
 31
-!s108 1552429693.568000
+!s108 1552606158.055000
 !s107 C:/Users/stfar/cpen311-lab4/s_memory.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/stfar/cpen311-lab4/s_memory.v|
 !i113 1
-o-work work
+R8
 vshuffle_datapath
 R0
 R1
@@ -115,7 +201,7 @@ R4
 r1
 !s85 0
 31
-!s108 1552580527.668000
+!s108 1552606157.414000
 !s107 C:/Users/stfar/cpen311-lab4/shuffle_datapath.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/shuffle_datapath.sv|
 !i113 1
@@ -130,7 +216,7 @@ R2
 !s105 shuffle_fsm_sv_unit
 S1
 R3
-w1552580520
+w1552590091
 8C:/Users/stfar/cpen311-lab4/shuffle_fsm.sv
 FC:/Users/stfar/cpen311-lab4/shuffle_fsm.sv
 L0 1
@@ -138,14 +224,14 @@ R4
 r1
 !s85 0
 31
-!s108 1552580527.427000
+!s108 1552606157.196000
 !s107 C:/Users/stfar/cpen311-lab4/shuffle_fsm.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/shuffle_fsm.sv|
 !i113 1
 R5
 vtask1
 R0
-R1
+R6
 !i10b 1
 !s100 Pf`>6MRzHTf5>dF;mC?``1
 I2j@`=iC?e0[YeBz:Aie^X3
@@ -161,7 +247,7 @@ R4
 r1
 !s85 0
 31
-!s108 1552580526.983000
+!s108 1552606156.774000
 !s107 C:/Users/stfar/cpen311-lab4/task1.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/task1.sv|
 !i113 1
@@ -184,8 +270,31 @@ R4
 r1
 !s85 0
 31
-!s108 1552580527.556000
+!s108 1552606157.321000
 !s107 C:/Users/stfar/cpen311-lab4/task2a.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/task2a.sv|
+!i113 1
+R5
+vtask2b
+R0
+R1
+!i10b 1
+!s100 <ST;LkK`miBL;z`Q0PTKN2
+IT_7BiWIS=^5PCzoSRBTdf0
+R2
+!s105 task2b_sv_unit
+S1
+R3
+w1552605780
+8C:/Users/stfar/cpen311-lab4/task2b.sv
+FC:/Users/stfar/cpen311-lab4/task2b.sv
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1552606157.758000
+!s107 C:/Users/stfar/cpen311-lab4/task2b.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/task2b.sv|
 !i113 1
 R5

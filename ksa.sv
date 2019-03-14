@@ -1,3 +1,5 @@
+`default_nettype none
+
 module ksa(
     input  logic       CLOCK_50,
     input  logic [3:0] KEY,
@@ -15,9 +17,7 @@ module ksa(
 
     logic clk;
     logic rst;
-    logic start_task1;
-    logic start_task2;
-    logic start_task3;
+    logic start;
 
     // task1 ports
     logic [7:0] task1_addr;
@@ -37,19 +37,32 @@ module ksa(
     logic [7:0] address;
     logic [7:0] data;
     logic       wr_en;
-    logic [7:0] mem_out;
+    logic [7:0] s_out;
 
-    assign         clk = CLOCK_50;
-    
-    assign         rst = ~KEY[3];
-    assign start_task1 = ~KEY[2];
-    assign start_task2 = ~KEY[1];
-    assign start_task3 = ~KEY[0];
+    // enc_memory ports
+    logic [7:0] address_enc;
+    logic [7:0] enc_out;
+
+    // dec_memory ports
+    logic [7:0] address_dec;
+    logic [7:0] data_dec;
+    logic       wr_en_dec;
+    logic [7:0] dec_out;
+
+    assign clk = CLOCK_50;
+    assign rst = ~KEY[3];
+
+    button_sync start_sync(
+        .clk       (clk),
+        .rst       (rst),
+        .async_sig (~KEY[2]),
+        .sync_sig  (start)
+    );
 
     task1 task1_inst(
         .clk        (clk),
         .rst        (rst),
-        .start      (start_task1),
+        .start      (start),
 
         .address    (task1_addr),
         .data       (task1_data),
@@ -61,8 +74,8 @@ module ksa(
     task2a task2a_inst(
         .clk        (clk),
         .rst        (rst),
-        .start      (start_task2),
-        .data_in    (mem_out),
+        .start      (task1_fin),
+        .data_in    (s_out),
         .secret_key (24'h000249),
 
         .address    (task2a_addr),
@@ -81,7 +94,24 @@ module ksa(
         .clock   (clk),
         .data    (data),
         .wren    (wr_en),
-        .q       (mem_out)
+
+        .q       (s_out)
+    );
+
+    enc_memory enc_memory_inst(
+        .address (address_enc),
+        .clock   (clk),
+
+        .q       (enc_out)
+    );
+
+    dec_memory dec_memory_inst(
+        .address(address_dec),
+        .clock  (clk),
+        .data   (data_dec),
+        .wren   (wr_en_dec),
+
+        .q      (dec_out)
     );
 
 endmodule

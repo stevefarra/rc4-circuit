@@ -1,9 +1,9 @@
 |ksa
-CLOCK_50 => clk.IN3
+CLOCK_50 => clk.IN4
 KEY[0] => ~NO_FANOUT~
-KEY[1] => start_task2.IN1
-KEY[2] => start_task1.IN1
-KEY[3] => rst.IN2
+KEY[1] => ~NO_FANOUT~
+KEY[2] => _.IN1
+KEY[3] => rst.IN3
 SW[0] => ~NO_FANOUT~
 SW[1] => ~NO_FANOUT~
 SW[2] => ~NO_FANOUT~
@@ -80,6 +80,17 @@ nIn[0] => Decoder0.IN3
 nIn[1] => Decoder0.IN2
 nIn[2] => Decoder0.IN1
 nIn[3] => Decoder0.IN0
+
+
+|ksa|button_sync:start_sync
+clk => state[0].CLK
+clk => state[1].CLK
+clk => state[2].CLK
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => Selector0.IN2
+async_sig => state.DATAB
+sync_sig <= state[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |ksa|task1:task1_inst
@@ -246,9 +257,8 @@ rst => state.OUTPUTSELECT
 rst => state.OUTPUTSELECT
 rst => state.OUTPUTSELECT
 rst => state.OUTPUTSELECT
-rst => state.OUTPUTSELECT
-start => Selector0.IN6
-start => Selector1.IN7
+start => Selector2.IN5
+start => Selector3.IN7
 i[0] => ~NO_FANOUT~
 i[1] => ~NO_FANOUT~
 i[2] => ~NO_FANOUT~
@@ -257,10 +267,10 @@ i[4] => ~NO_FANOUT~
 i[5] => ~NO_FANOUT~
 i[6] => ~NO_FANOUT~
 i[7] => ~NO_FANOUT~
-i[8] => Selector0.IN7
+i[8] => Selector0.IN5
+i[8] => Selector1.IN5
 i[8] => state.DATAB
-i[8] => state.DATAB
-i[8] => Selector1.IN2
+i[8] => Selector3.IN2
 inc_i <= state[8].DB_MAX_OUTPUT_PORT_TYPE
 sel_addr_j <= state[7].DB_MAX_OUTPUT_PORT_TYPE
 sel_data_j <= state[6].DB_MAX_OUTPUT_PORT_TYPE
