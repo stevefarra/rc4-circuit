@@ -12,6 +12,13 @@ module ksa_tb();
     logic       task1_on;
     logic       task1_fin;
 
+    // task2 ports
+    logic [7:0] task2a_addr;
+    logic [7:0] task2a_data;
+    logic       task2a_wr_en;
+    logic       task2a_on;
+    logic       task2a_fin;
+
     // s_memory ports
     logic [7:0] address;
     logic [7:0] data;
@@ -21,10 +28,6 @@ module ksa_tb();
     // testbench control
     logic read_ram;
     int i;
-
-    assign address = read_ram ? i : task1_addr;
-    assign    data = task1_data;
-    assign   wr_en = task1_wr_en;
 
     task1 task1_inst(
         .clk        (clk),
@@ -36,6 +39,24 @@ module ksa_tb();
         .task_on    (task1_on),
         .fin_strobe (task1_fin)
     );
+
+    task2a task2a_inst(
+        .clk        (clk),
+        .rst        (rst),
+        .start      (task1_fin),
+        .secret_key (24'h000249),
+        .mem_out    (task2a_data),
+
+        .wr_en      (task2a_wr_en),
+        .fsm_on     (task2a_on),
+        .fin_strobe (task2a_fin),
+        .mem_in     (mem_out),
+        .address    (task2a_addr)
+    );
+
+    assign address = read_ram ? i : (task1_on ? task1_addr : task2a_addr);
+    assign    data = task1_on ? task1_data : task2a_data;
+    assign   wr_en = task1_wr_en | task2a_wr_en;
 
     s_memory s_memory_inst(
         .address (address),
@@ -51,6 +72,7 @@ module ksa_tb();
     end
 
     initial begin
+        // Task 1: Initialize RAM
                              read_ram = 1'b0;
                                   rst = 1'b1;
         repeat(4) @(negedge clk); rst = 1'b0;
@@ -58,7 +80,8 @@ module ksa_tb();
         @(negedge clk); start = 1'b1;
         @(negedge clk); start = 1'b0;
 
-        @(negedge task1_fin);
+        // Print out the contents of RAM
+        @(negedge task2a_fin);
         @(negedge clk);
         read_ram = 1'b1;
         $display("Contents of RAM:");
