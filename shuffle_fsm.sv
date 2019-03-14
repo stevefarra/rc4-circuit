@@ -18,16 +18,15 @@ module shuffle_fsm(
     // {state_econding, 
     //  inc_i, sel_addr_j, sel_data_j, wr_en, store_data_i, store_data_j, store_j,
     //  fsm_on, fin_strobe}
-    typedef enum logic [12:0] {
-                  IDLE = 13'b0000_0000000_00,
-                 RD_SI = 13'b0001_0000000_10,
-          STR_SI_AND_J = 13'b0010_0000101_10,
-               READ_SJ = 13'b0011_0100000_10,
-     STR_SJ_WR_SI_TO_J = 13'b0100_0101010_10,
-            WR_SJ_TO_I = 13'b0101_0011000_10,
-                 INC_I = 13'b0110_1000000_10,
-               CHECK_I = 13'b0111_0000000_00,
-                  DONE = 13'b1000_0000000_01
+    typedef enum logic [11:0] {
+                  IDLE = 12'b000_0000000_00,
+                 RD_SI = 12'b001_0000000_10,
+          STR_SI_AND_J = 12'b010_0000101_10,
+               READ_SJ = 12'b011_0100000_10,
+     STR_SJ_WR_SI_TO_J = 12'b100_0101010_10,
+      WR_SJ_TO_I_INC_I = 12'b101_1011000_10,
+               CHECK_I = 12'b110_0000000_10,
+                  DONE = 12'b111_0000000_01
     } statetype;
     
     statetype state;
@@ -46,11 +45,9 @@ module shuffle_fsm(
 
                 READ_SJ: state <= STR_SJ_WR_SI_TO_J;
 
-                STR_SJ_WR_SI_TO_J: state <= WR_SJ_TO_I;
+                STR_SJ_WR_SI_TO_J: state <= WR_SJ_TO_I_INC_I;
 
-                WR_SJ_TO_I: state <= INC_I;
-
-                INC_I: state <= CHECK_I;
+                WR_SJ_TO_I_INC_I: state <= CHECK_I;
 
                 CHECK_I: if   (i[8]) state <= DONE;
                          else        state <= RD_SI;

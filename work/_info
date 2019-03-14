@@ -10,7 +10,7 @@ cModel Technology
 dC:/Users/stfar/cpen311/lab2/sim
 vcounter_en
 Z0 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z1 !s110 1552580230
+Z1 !s110 1552580527
 !i10b 1
 !s100 Q1LCIP6C<8_UObk5ail9<2
 IC6mQX>3Y8UU[aNLlj>PFm3
@@ -26,7 +26,7 @@ Z4 OV;L;10.3c;59
 r1
 !s85 0
 31
-!s108 1552580230.668000
+!s108 1552580527.092000
 !s107 C:/Users/stfar/cpen311-lab4/counter_en.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/counter_en.sv|
 !i113 1
@@ -49,7 +49,7 @@ R4
 r1
 !s85 0
 31
-!s108 1552580230.778000
+!s108 1552580527.202000
 !s107 C:/Users/stfar/cpen311-lab4/init_ram_fsm.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/init_ram_fsm.sv|
 !i113 1
@@ -72,7 +72,7 @@ R4
 r1
 !s85 0
 31
-!s108 1552580230.903000
+!s108 1552580527.311000
 !s107 C:/Users/stfar/cpen311-lab4/ksa_tb.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/ksa_tb.sv|
 !i113 1
@@ -99,7 +99,7 @@ r1
 o-work work
 vshuffle_datapath
 R0
-Z6 !s110 1552580231
+R1
 !i10b 1
 !s100 EhoYA7UYCY`W9DobECPEm2
 IJYFZYHHWDMc_Sz<F3Pk?R1
@@ -115,22 +115,22 @@ R4
 r1
 !s85 0
 31
-!s108 1552580231.246000
+!s108 1552580527.668000
 !s107 C:/Users/stfar/cpen311-lab4/shuffle_datapath.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/shuffle_datapath.sv|
 !i113 1
 R5
 vshuffle_fsm
 R0
-R6
+R1
 !i10b 1
-!s100 HaFzjQlIbi72c=idl:YcR1
-ID3]N80G1o64Jo1e[M6I5Y2
+!s100 m?CzfOncQZQHkCNGDg7CF1
+Iba2YU_FQ2HeJ^P@J?43HX2
 R2
 !s105 shuffle_fsm_sv_unit
 S1
 R3
-w1552580225
+w1552580520
 8C:/Users/stfar/cpen311-lab4/shuffle_fsm.sv
 FC:/Users/stfar/cpen311-lab4/shuffle_fsm.sv
 L0 1
@@ -138,7 +138,7 @@ R4
 r1
 !s85 0
 31
-!s108 1552580231.012000
+!s108 1552580527.427000
 !s107 C:/Users/stfar/cpen311-lab4/shuffle_fsm.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/shuffle_fsm.sv|
 !i113 1
@@ -161,14 +161,14 @@ R4
 r1
 !s85 0
 31
-!s108 1552580230.528000
+!s108 1552580526.983000
 !s107 C:/Users/stfar/cpen311-lab4/task1.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/task1.sv|
 !i113 1
 R5
 vtask2a
 R0
-R6
+R1
 !i10b 1
 !s100 o_F_4QBni]YD=3RWgDLH]0
 IGdhzb4Hn6Dl771[>Bk_;g2
@@ -184,7 +184,7 @@ R4
 r1
 !s85 0
 31
-!s108 1552580231.121000
+!s108 1552580527.556000
 !s107 C:/Users/stfar/cpen311-lab4/task2a.sv|
 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/stfar/cpen311-lab4/task2a.sv|
 !i113 1
