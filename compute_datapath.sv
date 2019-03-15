@@ -53,7 +53,7 @@ module compute_datapath(
         else if (store_f) f <= data_from_s_mem;  
 
     always_ff @(posedge clk)
-        if      (rst)   k <= 8'b0;
+        if      (rst)   k <= 6'b0;
         else if (inc_k) k <= k + 1;     
 
     always_ff @(posedge clk)
@@ -62,9 +62,10 @@ module compute_datapath(
 
     always_comb
         case (sel_addr_s_mem)
-            2'b00: addr_to_s_mem = i;
-            2'b01: addr_to_s_mem = j;
-            2'b10: addr_to_s_mem = s_i + s_j;
+              2'b00: addr_to_s_mem = i;
+              2'b01: addr_to_s_mem = j;
+              2'b10: addr_to_s_mem = s_i + s_j;
+            default: addr_to_s_mem = i;
         endcase
 
     assign data_to_s_mem = sel_data_s_mem ? s_j : s_i;

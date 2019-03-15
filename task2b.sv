@@ -27,7 +27,7 @@ module task2b(
     logic       store_f;
     logic       inc_k;
     logic       store_enc_k;
-    logic       k6;
+    logic       k5;
 
     compute_fsm compute_fsm_inst(
         .clk           (clk),

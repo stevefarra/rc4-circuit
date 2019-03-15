@@ -26,12 +26,19 @@ module ksa(
     logic       task1_on;
     logic       task1_fin;
 
-    // task2 ports
+    // task2a ports
     logic [7:0] task2a_addr;
     logic [7:0] task2a_data;
     logic       task2a_wr_en;
     logic       task2a_on;
     logic       task2a_fin;
+
+    // task2b ports
+    logic [7:0] task2b_addr;
+    logic [7:0] task2b_data;
+    logic       task2b_wr_en;
+    logic       task2b_on;
+    logic       task2b_fin;
 
     // s_memory ports
     logic [7:0] address;
@@ -76,7 +83,7 @@ module ksa(
         .rst        (rst),
         .start      (task1_fin),
         .data_in    (s_out),
-        .secret_key (24'h000249),
+        .secret_key ({{14{1'b0}},SW[9:0]}),
 
         .address    (task2a_addr),
         .data_out   (task2a_data),
@@ -85,9 +92,37 @@ module ksa(
         .fin_strobe (task2a_fin)
     );
 
-    assign address = task1_on ? task1_addr : task2a_addr;
-    assign    data = task1_on ? task1_data : task2a_data;
-    assign   wr_en = task1_wr_en | task2a_wr_en;
+    task2b task2b_inst(
+        .clk              (clk),
+        .rst              (rst),
+        .start            (task2a_fin),
+        .data_from_s_mem  (s_out),
+        .data_from_enc_mem(enc_out),
+
+        .addr_to_s_mem    (task2b_addr),
+        .data_to_s_mem    (task2b_data),
+        .wr_en            (task2b_wr_en),
+        .addr_to_enc_mem  (address_enc),
+        .addr_to_dec_mem  (address_dec),
+        .data_to_dec_mem  (data_dec),
+        .wr_en_dec        (wr_en_dec),
+        .task_on          (task2b_on),
+        .fin_strobe       (task2b_fin)
+    );    
+
+    always_comb begin
+        if      (task1_on)  address <= task1_addr;
+        else if (task2a_on) address <= task2a_addr;
+        else                address <= task2b_addr;
+    end
+
+    always_comb begin
+        if      (task1_on)  data <= task1_data;
+        else if (task2a_on) data <= task2a_data;
+        else                data <= task2b_data;
+    end
+
+    assign wr_en = task1_wr_en | task2a_wr_en | task2b_wr_en;
 
     s_memory s_memory_inst(
         .address (address),
@@ -106,12 +141,12 @@ module ksa(
     );
 
     dec_memory dec_memory_inst(
-        .address(address_dec),
-        .clock  (clk),
-        .data   (data_dec),
-        .wren   (wr_en_dec),
+        .address (address_dec),
+        .clock   (clk),
+        .data    (data_dec),
+        .wren    (wr_en_dec),
 
-        .q      (dec_out)
+        .q       (dec_out)
     );
 
 endmodule
