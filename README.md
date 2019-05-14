@@ -47,10 +47,10 @@ Here are the contents of `dec_memory` after computation given the message in `en
 
 <img src="https://i.imgur.com/7SOMOfd.png" width=800>
 
-And the FSM and datapath for the task2b module:
+As well as the FSM and datapath for the `task2b` module:
 
 <img src="https://i.imgur.com/18MJptG.png" width=275> <img src="https://i.imgur.com/ruLuZRm.png" width=500>
 
-At the top-level view of the `task2b` module, the FSM and datapath are connected in the following manner:
+At the top-level view of the module, the FSM and datapath are connected in the following manner:
 
 <img src="https://i.imgur.com/VaRyaAA.png" width=500>
