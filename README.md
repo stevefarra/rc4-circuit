@@ -10,13 +10,9 @@ The working memory, `s`, is initialized:
 for i = 0 to 255
   s[i] = i
 ```
-Here are the contents of `s` after initialization:
+Here are the contents of `s` after initialization and the schematic for the `task1` module:
 
-<img src="https://i.imgur.com/AwVrzy0.png" width=500>
-
-And the schematic for the `task1` module:
-
-<img src="https://i.imgur.com/CN8k3DT.png" width=500>
+<img src="https://i.imgur.com/AwVrzy0.png" width=400> <img src="https://i.imgur.com/CN8k3DT.png" width=400>
 
 ## Task 2
 `s` is shuffled based on the secret key (in this example, `0x000249`):
