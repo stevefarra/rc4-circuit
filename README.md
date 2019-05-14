@@ -54,8 +54,8 @@ At the top-level view of the module, the FSM and datapath are connected in the f
 
 <img src="https://i.imgur.com/VaRyaAA.png" width=500>
 
-## Testbench
-The `rc4_tb.sv` file contains a testbench that simulates each task running and interfacing with memory to execute the algorithm. When the simulation runs, the contents of decrpyted ram are output on the ModelSim console:
+## Simulation
+The `rc4_tb.sv` file is a testbench that simulates each task running and interfacing with memory to execute the algorithm. When the simulation runs, the contents of decrpyted ram are output on the ModelSim console:
 
 <img src="https://i.imgur.com/ujPxIkC.png" width=800>
 
