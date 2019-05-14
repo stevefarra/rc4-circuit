@@ -23,7 +23,7 @@ And the schematic for the `task1` module:
 ```
 j = 0
 for i = 0 to 255
-  j = (j + s[i] + secret_key[i mod keylength]) mod 256 // keylength is 3 in this implementation.
+  j = (j + s[i] + secret_key[i mod keylength]) mod 256 // keylength = 3 in this implementation
   swap values of s[i] and s[j]
 ```
 Note that the `mod 256` operation is already taken care of since the wordlength is 1 byte in memory. 
@@ -35,3 +35,15 @@ Here are the contents of `s` after the shuffle:
 And the FSM and datapath schematic for the `task2` module:
 
 <img src="https://i.imgur.com/FIgkEzY.png" width=350> <img src="https://i.imgur.com/1EANi7H.png" width=500> 
+
+## Task 3
+Each character in the decrypted message is computed byte by byte:
+```
+i, j = 0
+for k = 0 to (message_length - 1) // message_length = 32 in this implementation
+  i++
+  j += s[i]
+  swap values of s[i] and s[j]
+  f = s[s[i]+s[j]]
+  decrypted_output[k] = f XOR encrypted_input[k] // 8-bit XOR function
+```
