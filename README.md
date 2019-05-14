@@ -32,9 +32,9 @@ Here are the contents of `s` after the shuffle:
 
 <img src="https://i.imgur.com/C2sOKtX.png" width=800>
 
-And the FSM and datapath schematic for the `task2` module:
+And the FSM and datapath schematic for the `task2a` module:
 
-<img src="https://i.imgur.com/FIgkEzY.png" width=350> <img src="https://i.imgur.com/1EANi7H.png" width=500> 
+<img src="https://i.imgur.com/WoVsFjV.png" width=350> <img src="https://i.imgur.com/1EANi7H.png" width=500> 
 
 ## Task 3
 Each character in the decrypted message is computed byte by byte:
@@ -47,6 +47,10 @@ for k = 0 to (message_length - 1) // message_length = 32 in this implementation
   f = s[s[i]+s[j]]
   decrypted_output[k] = f XOR encrypted_input[k] // 8-bit XOR function
 ```
-Here are the contents of `dec_memory` given the message in `enc_memory` after computation:
+Here are the contents of `dec_memory` after computation given the message in `enc_memory`:
 
 <img src="https://i.imgur.com/7SOMOfd.png" width=800>
+
+And the FSM and datapath for the task2b module:
+
+
