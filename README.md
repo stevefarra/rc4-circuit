@@ -19,10 +19,9 @@ Here are the contents of `s` after initialization and the schematic for the `tas
 ```
 j = 0
 for i = 0 to 255
-  j = (j + s[i] + secret_key[i mod keylength]) mod 256 // keylength = 3 in this implementation
+  j = j + s[i] + secret_key[i mod keylength] // keylength = 3 in this implementation
   swap values of s[i] and s[j]
 ```
-Note that the `mod 256` operation is already taken care of since the wordlength is 1 byte in memory. 
 
 Here are the contents of `s` after the shuffle: 
 
@@ -54,3 +53,10 @@ As well as the FSM and datapath for the `task2b` module:
 At the top-level view of the module, the FSM and datapath are connected in the following manner:
 
 <img src="https://i.imgur.com/VaRyaAA.png" width=500>
+
+## Testbench
+The `rc4_tb.sv` file contains a testbench that simulates each task running and interfacing with memory to execute the algorithm. When the simulation runs, the contents of decrpyted ram are output on the ModelSim console:
+
+<img src="https://i.imgur.com/ujPxIkC.png" width=800>
+
+Note: that the `mod 256` operations in the algorithm are omitted since the wordlength is 1 byte in memory. 
