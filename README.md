@@ -47,3 +47,6 @@ for k = 0 to (message_length - 1) // message_length = 32 in this implementation
   f = s[s[i]+s[j]]
   decrypted_output[k] = f XOR encrypted_input[k] // 8-bit XOR function
 ```
+Here are the contents of `dec_memory` given the message in `enc_memory` after computation:
+
+<img src="https://i.imgur.com/7SOMOfd.png" width=800>
