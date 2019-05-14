@@ -28,7 +28,7 @@ Here are the contents of `s` after the shuffle:
 
 <img src="https://i.imgur.com/C2sOKtX.png" width=800>
 
-And the FSM and datapath schematic for the `task2a` module:
+As well as the FSM and datapath schematic for the `task2a` module:
 
 <img src="https://i.imgur.com/WoVsFjV.png" width=350> <img src="https://i.imgur.com/1EANi7H.png" width=500> 
 
@@ -49,4 +49,4 @@ Here are the contents of `dec_memory` after computation given the message in `en
 
 And the FSM and datapath for the task2b module:
 
-
+<img src="https://i.imgur.com/18MJptG.png" width=350> <img src="https://i.imgur.com/ruLuZRm.png" width=500>
