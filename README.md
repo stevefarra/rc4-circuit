@@ -5,7 +5,7 @@ using 3 finite state machines and datapaths. Here is a schematic of the top-leve
 <img src="https://i.imgur.com/W3b7LlD.png" width=500>
 
 ## Task 1
-The first step is to initialize the working memory, `s`, with ascending values:
+The working memory, `s`, is initialized:
 ```
 for i = 0 to 255
   s[i] = i
@@ -17,3 +17,17 @@ Here are the contents of `s` after initialization:
 And the schematic for the `task1` module:
 
 <img src="https://i.imgur.com/CN8k3DT.png" width=500>
+
+## Task 2
+`s` is shuffled based on the secret key (in this example, `0x000249`):
+```
+j = 0
+for i = 0 to 255
+  j = (j + s[i] + secret_key[i mod keylength]) mod 256 // keylength is 3 in this implementation.
+  swap values of s[i] and s[j]
+```
+Note that since the wordlength is 1 byte in memory, the mod 256 operation is already taken care of.
+
+Here are the contents of `s` after the shuffle: 
+
+<img src="https://i.imgur.com/FIgkEzY.png" width=500>
