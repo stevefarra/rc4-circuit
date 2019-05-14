@@ -30,4 +30,4 @@ Note that since the wordlength is 1 byte in memory, the mod 256 operation is alr
 
 Here are the contents of `s` after the shuffle: 
 
-<img src="https://i.imgur.com/FIgkEzY.png" width=500>
+<img src="https://i.imgur.com/C2sOKtX.png" width=750>
