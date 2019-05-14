@@ -26,8 +26,12 @@ for i = 0 to 255
   j = (j + s[i] + secret_key[i mod keylength]) mod 256 // keylength is 3 in this implementation.
   swap values of s[i] and s[j]
 ```
-Note that since the wordlength is 1 byte in memory, the mod 256 operation is already taken care of.
+Note that the `mod 256` operation is already taken care of since the wordlength is 1 byte in memory. 
 
 Here are the contents of `s` after the shuffle: 
 
 <img src="https://i.imgur.com/C2sOKtX.png" width=800>
+
+And the FSM and datapath schematic for the `task2` module:
+
+<img src="https://i.imgur.com/FIgkEzY.png" width=350> <img src="https://i.imgur.com/1EANi7H.png" width=500> 
